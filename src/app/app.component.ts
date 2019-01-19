@@ -10,9 +10,19 @@ export class AppComponent {
 
   title;
 
+  info;
+
+  constructor(private omdb:OmdbService){
+
+
+  }
+
   Data(){
     
+    this.omdb.movieData(this.title).subscribe(
 
+      (response) => {
+           this.info=response;
 
   }
 }
