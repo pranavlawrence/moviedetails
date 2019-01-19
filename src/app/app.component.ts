@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {OmdbService} from './omdb.service';
 
 @Component({
   selector: 'app-root',
