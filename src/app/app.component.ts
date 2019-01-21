@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {OmdbService} from './omdb.service';
+import { OmdbService } from './omdb.service';
 
 @Component({
   selector: 'app-root',
@@ -12,17 +12,19 @@ export class AppComponent {
 
   info;
 
-  constructor(private omdb:OmdbService){
+  constructor(private omdb: OmdbService) {
 
 
   }
 
-  Data(){
-    
+  Data() {
+
     this.omdb.movieData(this.title).subscribe(
 
       (response) => {
-           this.info=response;
+        this.info = response;
+      }
 
+    );
   }
 }
